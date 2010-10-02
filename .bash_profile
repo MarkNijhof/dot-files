@@ -64,6 +64,9 @@ fi
 export PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \w\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 
+alias v='mvim .'
+alias m='mate .'
+alias o='open .'
 alias r='rake'
 alias la='ls -al'
 alias profile='vim ~/.bash_profile'
