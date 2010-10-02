@@ -10,10 +10,10 @@ function sizetw() {
 
 sizetw 20 150
 
-export EDITOR=mate
+export EDITOR='vim -f'
 source ~/.git-completion.bash
-export HOME=/Users/mn 
-export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/tomcat/6.0.26/bin
+
+export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/head/bin:/usr/local/Cellar/tomcat/6.0.26/bin
 
 function directory_to_titlebar {
    local pwd_length=42 # The maximum length we want (seems to fit nicely
