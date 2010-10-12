@@ -61,6 +61,10 @@ if [[ "$TERM" == "xterm" || "$TERM" == "xterm-color" ]] ; then
  export PROMPT_COMMAND="directory_to_titlebar"
 fi
 
+if [[ "$HOME" == "/Users/mark nijhof" ]] ; then
+  export HOME="/Users/mn"
+fi
+
 export PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \w\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 
