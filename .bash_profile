@@ -13,7 +13,7 @@ sizetw 20 150
 export EDITOR='vim -f'
 source ~/.git-completion.bash
 
-export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/head/bin:/usr/local/Cellar/tomcat/6.0.26/bin
+export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin
 
 function directory_to_titlebar {
    local pwd_length=42 # The maximum length we want (seems to fit nicely
@@ -65,10 +65,9 @@ if [[ "$HOME" == "/Users/mark nijhof" ]] ; then
   export HOME="/Users/mn"
 fi
 
-export PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \w\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v)"; fi` \[$(tput sgr0)\]∴ '
 
-alias v='mvim .'
+alias v='vim .'
 alias m='mate .'
 alias o='open .'
 alias r='rake'
