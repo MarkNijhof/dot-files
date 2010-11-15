@@ -11,6 +11,7 @@ function sizetw() {
 sizetw 20 150
 
 export EDITOR='vim -f'
+export HISTCONTROL=ignoreboth #erasedups
 source ~/.git-completion.bash
 
 export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin
