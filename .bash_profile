@@ -12,10 +12,11 @@ sizetw 20 150
 
 export EDITOR='vim -f'
 export HISTCONTROL=erasedups  #ignoreboth #erasedups
+export NODE_PATH=/usr/local/Cellar/node/0.4.8/bin
 
 source ~/.git-completion.bash
 
-export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin
+export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin:/usr/local/Cellar/node/0.4.8/bin
 
 function directory_to_titlebar {
    local pwd_length=42 # The maximum length we want (seems to fit nicely
@@ -75,6 +76,8 @@ alias o='open .'
 alias r='rake'
 alias la='ls -al'
 alias profile='vim ~/.bash_profile'
-alias host='sudo vim /private/etc/hosts'
+alias host_file='sudo vim /private/etc/hosts'
+alias gph='git push heroku master'
+alias gp='git push origin master'
 
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
