@@ -68,7 +68,7 @@ if [[ "$HOME" == "/Users/mark nijhof" ]] ; then
   export HOME="/Users/mn"
 fi
 
-export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\]`if [ "$(~/.rvm/bin/rvm-prompt i v p g)" != "" ]; then echo " $(~/.rvm/bin/rvm-prompt i v p g)"; fi` \[$(tput sgr0)\]∴ '
+export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcprompt)"; fi`\[$(tput setaf 2)\] \[$(tput sgr0)\]∴ '
 
 alias v='vim .'
 alias m='mate .'
