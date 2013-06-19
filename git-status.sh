@@ -5,7 +5,7 @@ for d in `find . -maxdepth 5 -name .git -type d`; do
   RESULT=$(git status 2>&1)
 
   if ! [[ "$RESULT" =~ (.*)'nothing to commit'(.*) ]]; then 
-    echo -e "\nChanged detected in: $(pwd)"
+    echo -e "\nChanges detected in: $(pwd)"
     echo -e "$RESULT"
   fi
   
