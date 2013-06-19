@@ -1,7 +1,7 @@
 function positive_int() { return $(test "$@" -eq "$@" > /dev/null 2>&1 && test "$@" -ge 0 > /dev/null 2>&1); }
 
-function sizetw() { 
-   if [[ $# -eq 2 ]] && $(positive_int "$1") && $(positive_int "$2"); then 
+function sizetw() {
+   if [[ $# -eq 2 ]] && $(positive_int "$1") && $(positive_int "$2"); then
       printf "\e[8;${1};${2};t"
       return 0
    fi
@@ -12,11 +12,13 @@ sizetw 20 150
 
 export EDITOR='vim -f'
 export HISTCONTROL=erasedups  #ignoreboth #erasedups
-export NODE_PATH=/usr/local/Cellar/node/0.4.8/bin
+export NODE_PATH=/usr/local/bin/node
 
 source ~/.git-completion.bash
 
-export PATH=$PATH:~/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin:/usr/local/Cellar/node/0.4.8/bin
+export PATH="${HOME}/development/system/dotfiles:/usr/local/heroku/bin:/usr/local/bin:usr/local:/usr/local/sbin:/usr/bin:/usr/local/share/npm/bin:$PATH"
+# export PYTHONPATH=/Library/Python/2.7/site-packages/
+export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 
 function directory_to_titlebar {
    local pwd_length=42 # The maximum length we want (seems to fit nicely
@@ -73,12 +75,18 @@ export PS1='\W\[$(tput setaf 5)\]`if [ "$(vcprompt)" != "" ]; then echo " $(vcpr
 alias v='vim .'
 alias m='mate .'
 alias o='open .'
+alias e='emacs'
 alias r='rake'
 alias la='ls -al'
 alias profile='vim ~/.bash_profile'
 alias host_file='sudo vim /private/etc/hosts'
 alias gph='git push heroku master'
 alias gp='git push origin master'
-
+alias gs='${HOME}/development/system/dotfiles/git-status.sh'
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
+
+# Setting PATH for MacPython 2.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+export PATH
